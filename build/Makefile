@@ -129,6 +129,30 @@ space-invaders/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/build
 .PHONY : space-invaders/fast
 
+src/game.o: src/game.cpp.o
+.PHONY : src/game.o
+
+# target to build an object file
+src/game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/game.cpp.o
+.PHONY : src/game.cpp.o
+
+src/game.i: src/game.cpp.i
+.PHONY : src/game.i
+
+# target to preprocess a source file
+src/game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/game.cpp.i
+.PHONY : src/game.cpp.i
+
+src/game.s: src/game.cpp.s
+.PHONY : src/game.s
+
+# target to generate assembly for a file
+src/game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/game.cpp.s
+.PHONY : src/game.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -153,6 +177,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/spaceship.o: src/spaceship.cpp.o
+.PHONY : src/spaceship.o
+
+# target to build an object file
+src/spaceship.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/spaceship.cpp.o
+.PHONY : src/spaceship.cpp.o
+
+src/spaceship.i: src/spaceship.cpp.i
+.PHONY : src/spaceship.i
+
+# target to preprocess a source file
+src/spaceship.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/spaceship.cpp.i
+.PHONY : src/spaceship.cpp.i
+
+src/spaceship.s: src/spaceship.cpp.s
+.PHONY : src/spaceship.s
+
+# target to generate assembly for a file
+src/spaceship.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/spaceship.cpp.s
+.PHONY : src/spaceship.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +210,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... space-invaders"
+	@echo "... src/game.o"
+	@echo "... src/game.i"
+	@echo "... src/game.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/spaceship.o"
+	@echo "... src/spaceship.i"
+	@echo "... src/spaceship.s"
 .PHONY : help
 
 

@@ -1,8 +1,20 @@
 [
 {
   "directory": "/Users/gaurav/projects/space-invaders/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/gaurav/projects/space-invaders/include -std=gnu++2b -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/space-invaders.dir/src/game.cpp.o -c /Users/gaurav/projects/space-invaders/src/game.cpp",
+  "file": "/Users/gaurav/projects/space-invaders/src/game.cpp",
+  "output": "CMakeFiles/space-invaders.dir/src/game.cpp.o"
+},
+{
+  "directory": "/Users/gaurav/projects/space-invaders/build",
   "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/gaurav/projects/space-invaders/include -std=gnu++2b -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/space-invaders.dir/src/main.cpp.o -c /Users/gaurav/projects/space-invaders/src/main.cpp",
   "file": "/Users/gaurav/projects/space-invaders/src/main.cpp",
   "output": "CMakeFiles/space-invaders.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/gaurav/projects/space-invaders/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/gaurav/projects/space-invaders/include -std=gnu++2b -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/space-invaders.dir/src/spaceship.cpp.o -c /Users/gaurav/projects/space-invaders/src/spaceship.cpp",
+  "file": "/Users/gaurav/projects/space-invaders/src/spaceship.cpp",
+  "output": "CMakeFiles/space-invaders.dir/src/spaceship.cpp.o"
 }
 ]

@@ -1217,8 +1217,25 @@ CMakeFiles/space-invaders.dir/src/main.cpp.o: /Users/gaurav/projects/space-invad
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdint.h \
-  /Users/gaurav/projects/space-invaders/include/raylib.h
+  /Users/gaurav/projects/space-invaders/include/raylib.h \
+  /Users/gaurav/projects/space-invaders/src/game.hpp \
+  /Users/gaurav/projects/space-invaders/src/spaceship.hpp
 
+CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-invaders/src/spaceship.cpp \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg___gnuc_va_list.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg___va_copy.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_header_macro.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_va_arg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_va_copy.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_va_list.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdarg.h \
+  /Users/gaurav/projects/space-invaders/include/raylib.h \
+  /Users/gaurav/projects/space-invaders/src/spaceship.hpp
+
+
+/Users/gaurav/projects/space-invaders/src/spaceship.cpp:
+
+/Users/gaurav/projects/space-invaders/src/spaceship.hpp:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdint.h:
 
@@ -1415,6 +1432,8 @@ CMakeFiles/space-invaders.dir/src/main.cpp.o: /Users/gaurav/projects/space-invad
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/mach/vm_inherit.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/mach/vm_attributes.h:
+
+/Users/gaurav/projects/space-invaders/src/game.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/mach/thread_special_ports.h:
 

@@ -72,10 +72,24 @@ include CMakeFiles/space-invaders.dir/flags.make
 CMakeFiles/space-invaders.dir/codegen:
 .PHONY : CMakeFiles/space-invaders.dir/codegen
 
+CMakeFiles/space-invaders.dir/src/game.cpp.o: CMakeFiles/space-invaders.dir/flags.make
+CMakeFiles/space-invaders.dir/src/game.cpp.o: /Users/gaurav/projects/space-invaders/src/game.cpp
+CMakeFiles/space-invaders.dir/src/game.cpp.o: CMakeFiles/space-invaders.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/gaurav/projects/space-invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/space-invaders.dir/src/game.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-invaders.dir/src/game.cpp.o -MF CMakeFiles/space-invaders.dir/src/game.cpp.o.d -o CMakeFiles/space-invaders.dir/src/game.cpp.o -c /Users/gaurav/projects/space-invaders/src/game.cpp
+
+CMakeFiles/space-invaders.dir/src/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space-invaders.dir/src/game.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gaurav/projects/space-invaders/src/game.cpp > CMakeFiles/space-invaders.dir/src/game.cpp.i
+
+CMakeFiles/space-invaders.dir/src/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-invaders.dir/src/game.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gaurav/projects/space-invaders/src/game.cpp -o CMakeFiles/space-invaders.dir/src/game.cpp.s
+
 CMakeFiles/space-invaders.dir/src/main.cpp.o: CMakeFiles/space-invaders.dir/flags.make
 CMakeFiles/space-invaders.dir/src/main.cpp.o: /Users/gaurav/projects/space-invaders/src/main.cpp
 CMakeFiles/space-invaders.dir/src/main.cpp.o: CMakeFiles/space-invaders.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/gaurav/projects/space-invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/space-invaders.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/gaurav/projects/space-invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/space-invaders.dir/src/main.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-invaders.dir/src/main.cpp.o -MF CMakeFiles/space-invaders.dir/src/main.cpp.o.d -o CMakeFiles/space-invaders.dir/src/main.cpp.o -c /Users/gaurav/projects/space-invaders/src/main.cpp
 
 CMakeFiles/space-invaders.dir/src/main.cpp.i: cmake_force
@@ -86,18 +100,36 @@ CMakeFiles/space-invaders.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-invaders.dir/src/main.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gaurav/projects/space-invaders/src/main.cpp -o CMakeFiles/space-invaders.dir/src/main.cpp.s
 
+CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: CMakeFiles/space-invaders.dir/flags.make
+CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-invaders/src/spaceship.cpp
+CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: CMakeFiles/space-invaders.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/gaurav/projects/space-invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/space-invaders.dir/src/spaceship.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/space-invaders.dir/src/spaceship.cpp.o -MF CMakeFiles/space-invaders.dir/src/spaceship.cpp.o.d -o CMakeFiles/space-invaders.dir/src/spaceship.cpp.o -c /Users/gaurav/projects/space-invaders/src/spaceship.cpp
+
+CMakeFiles/space-invaders.dir/src/spaceship.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/space-invaders.dir/src/spaceship.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gaurav/projects/space-invaders/src/spaceship.cpp > CMakeFiles/space-invaders.dir/src/spaceship.cpp.i
+
+CMakeFiles/space-invaders.dir/src/spaceship.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/space-invaders.dir/src/spaceship.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gaurav/projects/space-invaders/src/spaceship.cpp -o CMakeFiles/space-invaders.dir/src/spaceship.cpp.s
+
 # Object files for target space-invaders
 space__invaders_OBJECTS = \
-"CMakeFiles/space-invaders.dir/src/main.cpp.o"
+"CMakeFiles/space-invaders.dir/src/game.cpp.o" \
+"CMakeFiles/space-invaders.dir/src/main.cpp.o" \
+"CMakeFiles/space-invaders.dir/src/spaceship.cpp.o"
 
 # External object files for target space-invaders
 space__invaders_EXTERNAL_OBJECTS =
 
+space-invaders: CMakeFiles/space-invaders.dir/src/game.cpp.o
 space-invaders: CMakeFiles/space-invaders.dir/src/main.cpp.o
+space-invaders: CMakeFiles/space-invaders.dir/src/spaceship.cpp.o
 space-invaders: CMakeFiles/space-invaders.dir/build.make
 space-invaders: /Users/gaurav/projects/space-invaders/lib/libraylib.a
 space-invaders: CMakeFiles/space-invaders.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/gaurav/projects/space-invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable space-invaders"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/gaurav/projects/space-invaders/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable space-invaders"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/space-invaders.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -85,12 +85,12 @@ clean: CMakeFiles/space-invaders.dir/clean
 CMakeFiles/space-invaders.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/gaurav/projects/space-invaders/build/CMakeFiles --progress-num=1,2 "Built target space-invaders"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/gaurav/projects/space-invaders/build/CMakeFiles --progress-num=1,2,3,4 "Built target space-invaders"
 .PHONY : CMakeFiles/space-invaders.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/space-invaders.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gaurav/projects/space-invaders/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gaurav/projects/space-invaders/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/space-invaders.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gaurav/projects/space-invaders/build/CMakeFiles 0
 .PHONY : CMakeFiles/space-invaders.dir/rule
@@ -102,7 +102,7 @@ space-invaders: CMakeFiles/space-invaders.dir/rule
 # codegen rule for target.
 CMakeFiles/space-invaders.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/gaurav/projects/space-invaders/build/CMakeFiles --progress-num=1,2 "Finished codegen for target space-invaders"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/gaurav/projects/space-invaders/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target space-invaders"
 .PHONY : CMakeFiles/space-invaders.dir/codegen
 
 # clean rule for target.

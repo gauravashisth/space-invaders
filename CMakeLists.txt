@@ -7,8 +7,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Include Raylib headers
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
+# Collect all .cpp files in src/ automatically
+file(GLOB SOURCES "src/*.cpp")
+# Add executable with all source files
+add_executable(space-invaders ${SOURCES})
+
 # Link Raylib static library
-add_executable(space-invaders src/main.cpp)
 target_link_libraries(space-invaders ${CMAKE_SOURCE_DIR}/lib/libraylib.a)
 
 # Add system dependencies for Raylib

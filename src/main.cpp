@@ -1,3 +1,4 @@
+#include "game.hpp"
 #include <iostream>
 #include <raylib.h>
 
@@ -63,9 +64,14 @@ int main() {
   InitWindow(screen_w, screen_h, "Space Invaders");
   SetTargetFPS(60);
 
+  game game;
+
   while (!WindowShouldClose()) {
+    game.inputs();
+
     BeginDrawing();
     ClearBackground(grey);
+    game.draw();
     EndDrawing();
   }
 
