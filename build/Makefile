@@ -129,6 +129,54 @@ space-invaders/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/build
 .PHONY : space-invaders/fast
 
+src/block.o: src/block.cpp.o
+.PHONY : src/block.o
+
+# target to build an object file
+src/block.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/block.cpp.o
+.PHONY : src/block.cpp.o
+
+src/block.i: src/block.cpp.i
+.PHONY : src/block.i
+
+# target to preprocess a source file
+src/block.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/block.cpp.i
+.PHONY : src/block.cpp.i
+
+src/block.s: src/block.cpp.s
+.PHONY : src/block.s
+
+# target to generate assembly for a file
+src/block.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/block.cpp.s
+.PHONY : src/block.cpp.s
+
+src/bunker.o: src/bunker.cpp.o
+.PHONY : src/bunker.o
+
+# target to build an object file
+src/bunker.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/bunker.cpp.o
+.PHONY : src/bunker.cpp.o
+
+src/bunker.i: src/bunker.cpp.i
+.PHONY : src/bunker.i
+
+# target to preprocess a source file
+src/bunker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/bunker.cpp.i
+.PHONY : src/bunker.cpp.i
+
+src/bunker.s: src/bunker.cpp.s
+.PHONY : src/bunker.s
+
+# target to generate assembly for a file
+src/bunker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/bunker.cpp.s
+.PHONY : src/bunker.cpp.s
+
 src/game.o: src/game.cpp.o
 .PHONY : src/game.o
 
@@ -234,6 +282,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... space-invaders"
+	@echo "... src/block.o"
+	@echo "... src/block.i"
+	@echo "... src/block.s"
+	@echo "... src/bunker.o"
+	@echo "... src/bunker.i"
+	@echo "... src/bunker.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"

@@ -1,6 +1,6 @@
 #include "game.hpp"
 #include "raylib.h"
-#include <iostream>
+// #include <iostream>
 
 Game::Game() {}
 Game::~Game() {}
@@ -10,7 +10,7 @@ void Game::update() {
     laser.update();
   }
   Dlasers();
-  std::cout << "lasers size: " << spaceship.lasers.size() << '\n';
+  // std::cout << "lasers size: " << spaceship.lasers.size() << '\n';
 }
 
 void Game::draw() {

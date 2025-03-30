@@ -1,6 +1,6 @@
-CMakeFiles/space-invaders.dir/src/laser.cpp.o: \
-  /Users/gaurav/projects/space-invaders/src/laser.cpp \
-  /Users/gaurav/projects/space-invaders/src/laser.hpp \
+CMakeFiles/space-invaders.dir/src/block.cpp.o: \
+  /Users/gaurav/projects/space-invaders/src/block.cpp \
+  /Users/gaurav/projects/space-invaders/src/block.hpp \
   /Users/gaurav/projects/space-invaders/include/raylib.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_header_macro.h \

@@ -1,8 +1,7 @@
-CMakeFiles/space-invaders.dir/src/game.cpp.o: \
-  /Users/gaurav/projects/space-invaders/src/game.cpp \
-  /Users/gaurav/projects/space-invaders/src/game.hpp \
-  /Users/gaurav/projects/space-invaders/src/spaceship.hpp \
-  /Users/gaurav/projects/space-invaders/src/laser.hpp \
+CMakeFiles/space-invaders.dir/src/bunker.cpp.o: \
+  /Users/gaurav/projects/space-invaders/src/bunker.cpp \
+  /Users/gaurav/projects/space-invaders/src/bunker.hpp \
+  /Users/gaurav/projects/space-invaders/src/block.hpp \
   /Users/gaurav/projects/space-invaders/include/raylib.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_header_macro.h \

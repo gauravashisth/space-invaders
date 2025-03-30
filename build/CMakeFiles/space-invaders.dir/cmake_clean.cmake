@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/space-invaders.dir/src/block.cpp.o"
+  "CMakeFiles/space-invaders.dir/src/block.cpp.o.d"
+  "CMakeFiles/space-invaders.dir/src/bunker.cpp.o"
+  "CMakeFiles/space-invaders.dir/src/bunker.cpp.o.d"
   "CMakeFiles/space-invaders.dir/src/game.cpp.o"
   "CMakeFiles/space-invaders.dir/src/game.cpp.o.d"
   "CMakeFiles/space-invaders.dir/src/laser.cpp.o"
