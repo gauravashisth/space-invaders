@@ -1,9 +1,9 @@
 #pragma once
 
 #include "raylib.h"
-class laser {
+class Laser {
 public:
-  laser(Vector2 position, int speed);
+  Laser(Vector2 position, int speed);
   void update();
   void draw();
   bool active;

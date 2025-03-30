@@ -1,23 +1,29 @@
 #include "spaceship.hpp"
 #include "raylib.h"
 
-spaceship::spaceship() {
+Spaceship::Spaceship() {
   image = LoadTexture("assets/spaceship.png");
   position.x = (GetScreenWidth() - image.width) * 0.5;
   position.y = GetScreenHeight() * 0.8;
 }
 
-spaceship::~spaceship() { UnloadTexture(image); }
+Spaceship::~Spaceship() { UnloadTexture(image); }
 
-void spaceship::draw() { DrawTextureV(image, position, WHITE); }
+void Spaceship::draw() { DrawTextureV(image, position, WHITE); }
 
-void spaceship::moveL() {
+void Spaceship::moveL() {
   position.x -= 7;
   if (position.x < 0 /*- image.width*/)
     position.x = GetScreenWidth() - image.width;
 }
-void spaceship::moveR() {
+void Spaceship::moveR() {
   position.x += 7;
   if (position.x > GetScreenWidth() - image.width)
     position.x = 0;
+}
+
+void Spaceship::shoot() {
+  lasers.push_back(Laser(
+      {position.x + (static_cast<float>(image.width) / 2) - 2, position.y},
+      -3));
 }

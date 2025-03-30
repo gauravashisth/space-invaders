@@ -2,10 +2,10 @@
 #include "spaceship.hpp"
 
 // container for all the elements of the game.
-class game {
+class Game {
 public:
-  game();
-  ~game();
+  Game();
+  ~Game();
   // draw all the game objects
   void draw();
   // update position of all game objects
@@ -14,5 +14,6 @@ public:
   void inputs();
 
 private:
-  spaceship spaceship;
+  // attribute
+  Spaceship spaceship;
 };

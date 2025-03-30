@@ -1,5 +1,4 @@
 #include "game.hpp"
-#include "laser.hpp"
 #include <iostream>
 #include <raylib.h>
 
@@ -65,18 +64,15 @@ int main() {
   InitWindow(screen_w, screen_h, "Space Invaders");
   SetTargetFPS(60);
 
-  game game;
-  // laser mylaser = laser({100, 100}, 7);
-  laser laser({1000, 500}, -5);
+  Game game;
 
   while (!WindowShouldClose()) {
     game.inputs();
-    laser.update();
+    game.update();
 
     BeginDrawing();
     ClearBackground(grey);
     game.draw();
-    laser.draw();
     EndDrawing();
   }
 

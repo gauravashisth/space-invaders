@@ -1,14 +1,18 @@
 #pragma once
+#include "laser.hpp"
 #include "raylib.h"
+#include <vector>
 
-class spaceship {
+class Spaceship {
 public:
-  spaceship();
-  ~spaceship();
+  Spaceship();
+  ~Spaceship();
   void draw();
   void moveL();
   void moveR();
-  void laser();
+  void shoot();
+  // vector that hold all the lasers
+  std::vector<Laser> lasers;
 
 private:
   Texture2D image;
