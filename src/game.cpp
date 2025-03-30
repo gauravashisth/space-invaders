@@ -1,5 +1,6 @@
 #include "game.hpp"
 #include "raylib.h"
+#include <iostream>
 
 Game::Game() {}
 Game::~Game() {}
@@ -8,6 +9,8 @@ void Game::update() {
   for (auto &laser : spaceship.lasers) {
     laser.update();
   }
+  Dlasers();
+  std::cout << "lasers size: " << spaceship.lasers.size() << '\n';
 }
 
 void Game::draw() {
@@ -25,4 +28,14 @@ void Game::inputs() {
     spaceship.moveR();
   else if (IsKeyDown(KEY_SPACE))
     spaceship.shoot();
+}
+
+// remove inactive lasers from "lasers" vector
+void Game::Dlasers() {
+  for (auto i = spaceship.lasers.begin(); i != spaceship.lasers.end();) {
+    if (!i->active)
+      i = spaceship.lasers.erase(i);
+    else
+      ++i;
+  }
 }

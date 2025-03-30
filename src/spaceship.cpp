@@ -5,6 +5,7 @@ Spaceship::Spaceship() {
   image = LoadTexture("assets/spaceship.png");
   position.x = (GetScreenWidth() - image.width) * 0.5;
   position.y = GetScreenHeight() * 0.8;
+  interval = 0.0;
 }
 
 Spaceship::~Spaceship() { UnloadTexture(image); }
@@ -23,7 +24,10 @@ void Spaceship::moveR() {
 }
 
 void Spaceship::shoot() {
-  lasers.push_back(Laser(
-      {position.x + (static_cast<float>(image.width) / 2) - 2, position.y},
-      -3));
+  if (GetTime() - interval >= 0.13) {
+    lasers.push_back(Laser(
+        {position.x + (static_cast<float>(image.width) / 2) - 2, position.y},
+        -3));
+    interval = GetTime();
+  }
 }

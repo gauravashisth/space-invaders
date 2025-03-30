@@ -17,4 +17,6 @@ public:
 private:
   Texture2D image;
   Vector2 position;
+  // last fire time
+  double interval;
 };

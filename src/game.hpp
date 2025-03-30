@@ -14,6 +14,8 @@ public:
   void inputs();
 
 private:
+  // deletes the inactive lasers
+  void Dlasers();
   // attribute
   Spaceship spaceship;
 };
