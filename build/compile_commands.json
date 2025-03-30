@@ -7,6 +7,12 @@
 },
 {
   "directory": "/Users/gaurav/projects/space-invaders/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/gaurav/projects/space-invaders/include -std=gnu++2b -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/space-invaders.dir/src/laser.cpp.o -c /Users/gaurav/projects/space-invaders/src/laser.cpp",
+  "file": "/Users/gaurav/projects/space-invaders/src/laser.cpp",
+  "output": "CMakeFiles/space-invaders.dir/src/laser.cpp.o"
+},
+{
+  "directory": "/Users/gaurav/projects/space-invaders/build",
   "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/gaurav/projects/space-invaders/include -std=gnu++2b -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk -o CMakeFiles/space-invaders.dir/src/main.cpp.o -c /Users/gaurav/projects/space-invaders/src/main.cpp",
   "file": "/Users/gaurav/projects/space-invaders/src/main.cpp",
   "output": "CMakeFiles/space-invaders.dir/src/main.cpp.o"

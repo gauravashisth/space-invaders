@@ -1,4 +1,5 @@
 #include "game.hpp"
+#include "laser.hpp"
 #include <iostream>
 #include <raylib.h>
 
@@ -65,13 +66,17 @@ int main() {
   SetTargetFPS(60);
 
   game game;
+  // laser mylaser = laser({100, 100}, 7);
+  laser laser({1000, 500}, -5);
 
   while (!WindowShouldClose()) {
     game.inputs();
+    laser.update();
 
     BeginDrawing();
     ClearBackground(grey);
     game.draw();
+    laser.draw();
     EndDrawing();
   }
 

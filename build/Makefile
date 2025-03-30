@@ -153,6 +153,30 @@ src/game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
 
+src/laser.o: src/laser.cpp.o
+.PHONY : src/laser.o
+
+# target to build an object file
+src/laser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/laser.cpp.o
+.PHONY : src/laser.cpp.o
+
+src/laser.i: src/laser.cpp.i
+.PHONY : src/laser.i
+
+# target to preprocess a source file
+src/laser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/laser.cpp.i
+.PHONY : src/laser.cpp.i
+
+src/laser.s: src/laser.cpp.s
+.PHONY : src/laser.s
+
+# target to generate assembly for a file
+src/laser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/laser.cpp.s
+.PHONY : src/laser.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -213,6 +237,9 @@ help:
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
+	@echo "... src/laser.o"
+	@echo "... src/laser.i"
+	@echo "... src/laser.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

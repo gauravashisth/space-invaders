@@ -6,8 +6,11 @@ class game {
 public:
   game();
   ~game();
+  // draw all the game objects
   void draw();
+  // update position of all game objects
   void update();
+  // handles the player's input
   void inputs();
 
 private:

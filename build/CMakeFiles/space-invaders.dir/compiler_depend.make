@@ -13,6 +13,17 @@ CMakeFiles/space-invaders.dir/src/game.cpp.o: /Users/gaurav/projects/space-invad
   /Users/gaurav/projects/space-invaders/src/game.hpp \
   /Users/gaurav/projects/space-invaders/src/spaceship.hpp
 
+CMakeFiles/space-invaders.dir/src/laser.cpp.o: /Users/gaurav/projects/space-invaders/src/laser.cpp \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg___gnuc_va_list.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg___va_copy.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_header_macro.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_va_arg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_va_copy.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_va_list.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdarg.h \
+  /Users/gaurav/projects/space-invaders/include/raylib.h \
+  /Users/gaurav/projects/space-invaders/src/laser.hpp
+
 CMakeFiles/space-invaders.dir/src/main.cpp.o: /Users/gaurav/projects/space-invaders/src/main.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Headers/ATS.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Headers/ATSDefines.h \
@@ -1231,6 +1242,7 @@ CMakeFiles/space-invaders.dir/src/main.cpp.o: /Users/gaurav/projects/space-invad
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdint.h \
   /Users/gaurav/projects/space-invaders/include/raylib.h \
   /Users/gaurav/projects/space-invaders/src/game.hpp \
+  /Users/gaurav/projects/space-invaders/src/laser.hpp \
   /Users/gaurav/projects/space-invaders/src/spaceship.hpp
 
 CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-invaders/src/spaceship.cpp \
@@ -1665,10 +1677,6 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/promote.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/sys/_select.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/operation_traits.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/noexcept_move_assign_container.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/negation.h:
@@ -1712,6 +1720,10 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/is_trivially_copy_assignable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/is_signed_integer.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/is_signed.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/is_scalar.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/time.h:
 
@@ -1825,8 +1837,6 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__system_error/error_code.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__system_error/errc.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/integral_constant.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__threading_support:
@@ -1939,17 +1949,11 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__math/modulo.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/is_scalar.h:
-
 /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stddef.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/mach/sync_policy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__math/min_max.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/xlocale.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__math/inverse_trigonometric_functions.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__math/gamma.h:
 
@@ -2006,8 +2010,6 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__iterator/incrementable_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__iterator/distance.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/is_signed.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__variant/monostate.h:
 
@@ -2411,13 +2413,15 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/_assert.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/move_backward.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/TargetConditionals.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/__xlocale.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stddef_offsetof.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/__wctype.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/move_backward.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/TargetConditionals.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/ConditionalMacros.h:
 
@@ -2739,6 +2743,8 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__system_error/system_error.h:
 
+/Users/gaurav/projects/space-invaders/src/laser.cpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTGlyphInfo.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/sys/_pthread/_pthread_once_t.h:
@@ -2991,12 +2997,6 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/LowMem.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/format_arg_store.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/mach/processor_info.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Finder.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/malloc/_malloc.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/CarbonCore.h:
@@ -3173,30 +3173,6 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGEventTypes.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/find.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/HFSVolumes.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGDirectDisplay.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/arm/_param.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/is_trivial.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGWindowLevel.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/IOKit.framework/Headers/hidsystem/IOHIDTypes.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__utility/integer_sequence.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGColor.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/QD.framework/Headers/QDAvailability.h:
-
-/Users/gaurav/projects/space-invaders/include/raylib.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Files.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_ssize_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/is_standard_layout.h:
@@ -3229,7 +3205,9 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGDirectDisplayMetal.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/__xlocale.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/arm/_param.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGDirectDisplay.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGConvertColorDataWithFormat.h:
 
@@ -3290,6 +3268,12 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/mach/mach_interface.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/find_first_of.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__utility/integer_sequence.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/QD.framework/Headers/QDAvailability.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGColor.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/_xlocale.h:
 
@@ -3411,6 +3395,8 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__functional/reference_wrapper.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__system_error/errc.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/sys/_posix_availability.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdarg.h:
@@ -3497,6 +3483,12 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFHTTPStream.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/is_trivial.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/IOKit.framework/Headers/hidsystem/IOHIDTypes.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGWindowLevel.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_rsize_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__compare/weak_order.h:
@@ -3506,6 +3498,14 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/is_nothrow_move_constructible.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFHTTPMessage.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/find.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/HFSVolumes.h:
+
+/Users/gaurav/projects/space-invaders/include/raylib.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Files.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/cwctype:
 
@@ -3561,11 +3561,27 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 
 /Users/gaurav/projects/space-invaders/src/game.hpp:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__format/format_arg_store.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/mach/processor_info.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Finder.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGToneMapping.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers/InternetConfig.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/xlocale.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__math/inverse_trigonometric_functions.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/sys/_select.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__type_traits/operation_traits.h:
+
+/Users/gaurav/projects/space-invaders/src/laser.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/Security.framework/Headers/certextensions.h:
 
@@ -3639,12 +3655,6 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/lower_bound.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_fsblkcnt_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTRunDelegate.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFFileSecurity.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/Security.framework/Headers/AuthorizationTags.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/QD.framework/Headers/QD.h:
@@ -3658,6 +3668,12 @@ CMakeFiles/space-invaders.dir/src/spaceship.cpp.o: /Users/gaurav/projects/space-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/ImageIO.framework/Headers/CGImageProperties.h:
 
 /Users/gaurav/projects/space-invaders/src/spaceship.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/sys/_types/_fsblkcnt_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTRunDelegate.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFFileSecurity.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGDataProvider.h:
 
