@@ -129,6 +129,30 @@ space-invaders/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/build
 .PHONY : space-invaders/fast
 
+src/alien.o: src/alien.cpp.o
+.PHONY : src/alien.o
+
+# target to build an object file
+src/alien.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/alien.cpp.o
+.PHONY : src/alien.cpp.o
+
+src/alien.i: src/alien.cpp.i
+.PHONY : src/alien.i
+
+# target to preprocess a source file
+src/alien.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/alien.cpp.i
+.PHONY : src/alien.cpp.i
+
+src/alien.s: src/alien.cpp.s
+.PHONY : src/alien.s
+
+# target to generate assembly for a file
+src/alien.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/alien.cpp.s
+.PHONY : src/alien.cpp.s
+
 src/block.o: src/block.cpp.o
 .PHONY : src/block.o
 
@@ -282,6 +306,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... space-invaders"
+	@echo "... src/alien.o"
+	@echo "... src/alien.i"
+	@echo "... src/alien.s"
 	@echo "... src/block.o"
 	@echo "... src/block.i"
 	@echo "... src/block.s"

@@ -1,3 +1,4 @@
+#include "alien.hpp"
 #include "game.hpp"
 #include <iostream>
 #include <raylib.h>
@@ -65,6 +66,7 @@ int main() {
   SetTargetFPS(60);
 
   Game game;
+  Alien alien = Alien(2, {100, 100});
 
   while (!WindowShouldClose()) {
     game.inputs();
@@ -73,6 +75,7 @@ int main() {
     BeginDrawing();
     ClearBackground(grey);
     game.draw();
+    alien.draw();
     EndDrawing();
   }
 
