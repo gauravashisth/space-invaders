@@ -1,4 +1,5 @@
 #pragma once
+#include "bunker.hpp"
 #include "spaceship.hpp"
 
 // container for all the elements of the game.
@@ -16,6 +17,10 @@ public:
 private:
   // deletes the inactive lasers
   void Dlasers();
+  // below method return a vector of bunkers
+  std::vector<Bunker> newBunkers();
   // attribute
   Spaceship spaceship;
+  // vector holds nth bunkers
+  std::vector<Bunker> bunkers;
 };

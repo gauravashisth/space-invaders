@@ -9,7 +9,8 @@ public:
   Vector2 position;
   // vector that contains all the blocks of bunker
   std::vector<Block> blocks;
-  std::vector<std::vector<int>> grid;
+  // static, to access w/o having to create an obj
+  static std::vector<std::vector<int>> grid;
 
 private:
 };

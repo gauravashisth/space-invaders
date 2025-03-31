@@ -2,7 +2,10 @@
 #include "raylib.h"
 // #include <iostream>
 
-Game::Game() {}
+Game::Game() {
+  // vector bunkers, which holds 4 bunker objects.
+  bunkers = newBunkers();
+}
 Game::~Game() {}
 
 void Game::update() {
@@ -18,6 +21,10 @@ void Game::draw() {
 
   for (auto &laser : spaceship.lasers) {
     laser.draw();
+  }
+
+  for (auto &bunker : bunkers) {
+    bunker.draw();
   }
 }
 
@@ -38,4 +45,16 @@ void Game::Dlasers() {
     else
       ++i;
   }
+}
+
+std::vector<Bunker> Game::newBunkers() {
+  int bunker_w = Bunker::grid[0].size() * 3;
+  float spacing = (GetScreenWidth() - (4 * bunker_w)) * 0.2;
+
+  for (int i = 0; i < 4; i++) {
+    // calculates H position of each bunker
+    float offsetX = (i + 1) * spacing + i * bunker_w;
+    bunkers.push_back(Bunker({offsetX, float(GetScreenHeight() * 0.65)}));
+  }
+  return bunkers;
 }
