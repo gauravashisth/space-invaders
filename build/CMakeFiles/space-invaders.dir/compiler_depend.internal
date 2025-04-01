@@ -1274,6 +1274,7 @@ CMakeFiles/space-invaders.dir/src/game.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdint.h
  /Users/gaurav/projects/space-invaders/include/raylib.h
+ /Users/gaurav/projects/space-invaders/src/alien.hpp
  /Users/gaurav/projects/space-invaders/src/block.hpp
  /Users/gaurav/projects/space-invaders/src/bunker.hpp
  /Users/gaurav/projects/space-invaders/src/game.hpp

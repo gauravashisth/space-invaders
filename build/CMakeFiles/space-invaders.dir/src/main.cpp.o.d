@@ -1,5 +1,6 @@
 CMakeFiles/space-invaders.dir/src/main.cpp.o: \
   /Users/gaurav/projects/space-invaders/src/main.cpp \
+  /Users/gaurav/projects/space-invaders/src/game.hpp \
   /Users/gaurav/projects/space-invaders/src/alien.hpp \
   /Users/gaurav/projects/space-invaders/include/raylib.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/stdarg.h \
@@ -9,7 +10,6 @@ CMakeFiles/space-invaders.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_va_arg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg___va_copy.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/16/include/__stdarg_va_copy.h \
-  /Users/gaurav/projects/space-invaders/src/game.hpp \
   /Users/gaurav/projects/space-invaders/src/bunker.hpp \
   /Users/gaurav/projects/space-invaders/src/block.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/vector \

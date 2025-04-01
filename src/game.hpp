@@ -1,4 +1,5 @@
 #pragma once
+#include "alien.hpp"
 #include "bunker.hpp"
 #include "spaceship.hpp"
 
@@ -17,10 +18,12 @@ public:
 private:
   // deletes the inactive lasers
   void Dlasers();
-  // below method return a vector of bunkers
-  std::vector<Bunker> newBunkers();
   // attribute
   Spaceship spaceship;
   // vector holds nth bunkers
   std::vector<Bunker> bunkers;
+  // below method return a vector of bunkers
+  std::vector<Bunker> newBunkers();
+  std::vector<Alien> aliens;
+  std::vector<Alien> newAliens();
 };

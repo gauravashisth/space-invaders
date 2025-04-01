@@ -1,10 +1,13 @@
 #include "game.hpp"
+#include "alien.hpp"
 #include "raylib.h"
+#include <vector>
 // #include <iostream>
 
 Game::Game() {
   // vector bunkers, which holds 4 bunker objects.
   bunkers = newBunkers();
+  aliens = newAliens();
 }
 Game::~Game() {}
 
@@ -26,6 +29,10 @@ void Game::draw() {
   for (auto &bunker : bunkers) {
     bunker.draw();
   }
+
+  for (auto &alien : aliens) {
+    alien.draw();
+  }
 }
 
 void Game::inputs() {
@@ -33,7 +40,7 @@ void Game::inputs() {
     spaceship.moveL();
   else if (IsKeyDown(KEY_L))
     spaceship.moveR();
-  else if (IsKeyDown(KEY_SPACE))
+  else if (IsKeyDown(KEY_J))
     spaceship.shoot();
 }
 
@@ -57,4 +64,23 @@ std::vector<Bunker> Game::newBunkers() {
     bunkers.push_back(Bunker({offsetX, float(GetScreenHeight() * 0.65)}));
   }
   return bunkers;
+}
+
+std::vector<Alien> Game::newAliens() {
+  std::vector<Alien> aliens;
+  for (int r = 0; r < 5; r++) {
+    for (int c = 0; c < 11; c++) {
+      int alienType;
+      if (r == 0)
+        alienType = 3;
+      else if (r == 1 || r == 2)
+        alienType = 2;
+      else
+        alienType = 1;
+      float x = 75 + c * 55;  // cell size
+      float y = 100 + r * 55; // cell size
+      aliens.push_back(Alien(alienType, {x, y}));
+    }
+  }
+  return aliens;
 }
