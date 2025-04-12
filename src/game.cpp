@@ -57,9 +57,9 @@ void Game::Dlasers() {
 std::vector<Bunker> Game::newBunkers() {
   int bunker_w = Bunker::grid[0].size() * 3;
   float spacing = (GetScreenWidth() - (4 * bunker_w)) * 0.15;
+  int bunker_num = GetScreenWidth() * 0.004; // no. of bunkers drawn
 
-  // determine the no. of bunkers
-  for (int i = 0; i < 5; i++) {
+  for (int i = 0; i < bunker_num; i++) {
     // calculates H position of each bunker
     float offsetX = (i + 1) * spacing + i * bunker_w;
     bunkers.push_back(Bunker({offsetX, float(GetScreenHeight() * 0.65)}));
