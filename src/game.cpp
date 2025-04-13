@@ -9,6 +9,7 @@ Game::Game() {
   bunkers = newBunkers();
   aliens = newAliens();
   alien_dir = 1;
+  lastAlien_fire = 0.0;
 }
 Game::~Game() { Alien::unloadImages(); }
 
@@ -61,6 +62,13 @@ void Game::Dlasers() {
   for (auto i = spaceship.lasers.begin(); i != spaceship.lasers.end();) {
     if (!i->active)
       i = spaceship.lasers.erase(i);
+    else
+      ++i;
+  }
+  // for alien lasers
+  for (auto i = alienLasers.begin(); i != alienLasers.end();) {
+    if (!i->active)
+      i = alienLasers.erase(i);
     else
       ++i;
   }
@@ -125,11 +133,16 @@ void Game::moveJAliens(int distance) {
 }
 
 void Game::alienLaser() {
-  int random_index = GetRandomValue(0, aliens.size() - 1);
+  double currentTime = GetTime();
+  if (currentTime - lastAlien_fire >= alienLaser_interval && !aliens.empty()) {
+    int random_index = GetRandomValue(0, aliens.size() - 1);
 
-  Alien &alien = aliens[random_index];
-  alienLasers.push_back(
-      Laser({alien.position.x + alien.alienImages[alien.type - 1].width / 2,
-             alien.position.y + alien.alienImages[alien.type - 1].height},
-            6));
+    Alien &alien = aliens[random_index];
+    alienLasers.push_back(
+        Laser({alien.position.x + alien.alienImages[alien.type - 1].width / 2,
+               alien.position.y + alien.alienImages[alien.type - 1].height},
+              6));
+
+    lastAlien_fire = GetTime();
+  }
 }

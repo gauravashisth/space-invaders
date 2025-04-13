@@ -31,4 +31,6 @@ private:
   int alien_dir;
   std::vector<Laser> alienLasers;
   void alienLaser();
+  constexpr static float alienLaser_interval = 0.35;
+  float lastAlien_fire;
 };
