@@ -29,4 +29,6 @@ private:
   void moveAliens();
   void moveJAliens(int distance);
   int alien_dir;
+  std::vector<Laser> alienLasers;
+  void alienLaser();
 };

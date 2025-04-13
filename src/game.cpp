@@ -18,6 +18,11 @@ void Game::update() {
   }
 
   moveAliens();
+  alienLaser();
+  for (auto &laser : alienLasers) {
+    laser.update();
+  }
+
   Dlasers();
   // std::cout << "lasers size: " << spaceship.lasers.size() << '\n';
 }
@@ -35,6 +40,10 @@ void Game::draw() {
 
   for (auto &alien : aliens) {
     alien.draw();
+  }
+
+  for (auto &laser : alienLasers) {
+    laser.draw();
   }
 }
 
@@ -113,4 +122,14 @@ void Game::moveJAliens(int distance) {
   for (auto &alien : aliens) {
     alien.position.y += distance;
   }
+}
+
+void Game::alienLaser() {
+  int random_index = GetRandomValue(0, aliens.size() - 1);
+
+  Alien &alien = aliens[random_index];
+  alienLasers.push_back(
+      Laser({alien.position.x + alien.alienImages[alien.type - 1].width / 2,
+             alien.position.y + alien.alienImages[alien.type - 1].height},
+            6));
 }
