@@ -27,5 +27,6 @@ private:
   std::vector<Alien> aliens;
   std::vector<Alien> newAliens();
   void moveAliens();
+  void moveJAliens(int distance);
   int alien_dir;
 };

@@ -99,10 +99,18 @@ void Game::moveAliens() {
     if (alien.position.x + alien.alienImages[alien.type - 1].width >
         GetScreenWidth()) {
       alien_dir = -1;
+      moveJAliens(4);
     }
     if (alien.position.x < 0) {
       alien_dir = 1;
+      moveJAliens(4);
     }
     alien.update(alien_dir);
+  }
+}
+
+void Game::moveJAliens(int distance) {
+  for (auto &alien : aliens) {
+    alien.position.y += distance;
   }
 }
