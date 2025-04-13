@@ -68,9 +68,13 @@ std::vector<Bunker> Game::newBunkers() {
 }
 
 std::vector<Alien> Game::newAliens() {
+  int alien_row = GetScreenHeight() * 0.007;
+  int alien_col = GetScreenWidth() * 0.010;
+  int pad_H = GetScreenWidth() * 0.024;
+  int pad_K = GetScreenHeight() * 0.1;
   std::vector<Alien> aliens;
-  for (int r = 0; r < 5; r++) {
-    for (int c = 0; c < 11; c++) {
+  for (int r = 0; r < alien_row; r++) {
+    for (int c = 0; c < alien_col; c++) {
       int alienType;
       if (r == 0)
         alienType = 3;
@@ -78,8 +82,8 @@ std::vector<Alien> Game::newAliens() {
         alienType = 2;
       else
         alienType = 1;
-      float x = 75 + c * 55;  // cell size
-      float y = 100 + r * 55; // cell size
+      float x = pad_H + c * 55; // cell size
+      float y = pad_K + r * 55; // cell size
       aliens.push_back(Alien(alienType, {x, y}));
     }
   }
