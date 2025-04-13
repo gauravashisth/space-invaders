@@ -8,6 +8,7 @@ Game::Game() {
   // vector bunkers, which holds 4 bunker objects.
   bunkers = newBunkers();
   aliens = newAliens();
+  alien_dir = 1;
 }
 Game::~Game() { Alien::unloadImages(); }
 
@@ -15,6 +16,8 @@ void Game::update() {
   for (auto &laser : spaceship.lasers) {
     laser.update();
   }
+
+  moveAliens();
   Dlasers();
   // std::cout << "lasers size: " << spaceship.lasers.size() << '\n';
 }
@@ -89,4 +92,17 @@ std::vector<Alien> Game::newAliens() {
     }
   }
   return aliens;
+}
+
+void Game::moveAliens() {
+  for (auto &alien : aliens) {
+    if (alien.position.x + alien.alienImages[alien.type - 1].width >
+        GetScreenWidth()) {
+      alien_dir = -1;
+    }
+    if (alien.position.x < 0) {
+      alien_dir = 1;
+    }
+    alien.update(alien_dir);
+  }
 }

@@ -35,3 +35,5 @@ void Alien::unloadImages() {
     UnloadTexture(alienImages[i]);
   }
 }
+
+void Alien::update(int direction) { position.x += direction; }

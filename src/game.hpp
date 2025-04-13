@@ -26,4 +26,6 @@ private:
   std::vector<Bunker> newBunkers();
   std::vector<Alien> aliens;
   std::vector<Alien> newAliens();
+  void moveAliens();
+  int alien_dir;
 };

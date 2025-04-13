@@ -4,7 +4,7 @@
 class Alien {
 public:
   Alien(int type, Vector2 position);
-  void update();
+  void update(int direction);
   void draw();
   int getType();
   static void unloadImages();
