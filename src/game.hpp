@@ -1,6 +1,7 @@
 #pragma once
 #include "alien.hpp"
 #include "bunker.hpp"
+#include "mystery.hpp"
 #include "spaceship.hpp"
 
 // container for all the elements of the game.
@@ -33,4 +34,6 @@ private:
   void alienLaser();
   constexpr static float alienLaser_interval = 0.35;
   float lastAlien_fire;
+
+  Mystery mystery;
 };

@@ -1,15 +1,17 @@
 #include "game.hpp"
 #include "alien.hpp"
 #include "raylib.h"
-#include <vector>
 // #include <iostream>
 
 Game::Game() {
   // vector bunkers, which holds 4 bunker objects.
   bunkers = newBunkers();
   aliens = newAliens();
+
   alien_dir = 1;
   lastAlien_fire = 0.0;
+
+  mystery.spawn();
 }
 Game::~Game() { Alien::unloadImages(); }
 
@@ -26,6 +28,8 @@ void Game::update() {
 
   Dlasers();
   // std::cout << "lasers size: " << spaceship.lasers.size() << '\n';
+
+  mystery.update();
 }
 
 void Game::draw() {
@@ -46,6 +50,8 @@ void Game::draw() {
   for (auto &laser : alienLasers) {
     laser.draw();
   }
+
+  mystery.draw();
 }
 
 void Game::inputs() {
@@ -91,7 +97,7 @@ std::vector<Alien> Game::newAliens() {
   int alien_row = GetScreenHeight() * 0.007;
   int alien_col = GetScreenWidth() * 0.010;
   int pad_H = GetScreenWidth() * 0.024;
-  int pad_K = GetScreenHeight() * 0.1;
+  int pad_K = GetScreenHeight() * 0.15;
 
   std::vector<Alien> aliens;
   for (int r = 0; r < alien_row; r++) {
