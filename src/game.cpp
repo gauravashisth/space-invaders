@@ -9,7 +9,7 @@ Game::Game() {
   bunkers = newBunkers();
   aliens = newAliens();
 }
-Game::~Game() {}
+Game::~Game() { Alien::unloadImages(); }
 
 void Game::update() {
   for (auto &laser : spaceship.lasers) {
@@ -72,6 +72,7 @@ std::vector<Alien> Game::newAliens() {
   int alien_col = GetScreenWidth() * 0.010;
   int pad_H = GetScreenWidth() * 0.024;
   int pad_K = GetScreenHeight() * 0.1;
+
   std::vector<Alien> aliens;
   for (int r = 0; r < alien_row; r++) {
     for (int c = 0; c < alien_col; c++) {

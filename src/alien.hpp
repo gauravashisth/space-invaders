@@ -7,7 +7,9 @@ public:
   void update();
   void draw();
   int getType();
-  Texture2D image;
+  static void unloadImages();
+  // Texture2D image;
+  static Texture2D alienImages[3];
   int type;
   Vector2 position;
 
