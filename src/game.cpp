@@ -11,11 +11,20 @@ Game::Game() {
   alien_dir = 1;
   lastAlien_fire = 0.0;
 
-  mystery.spawn();
+  // mystery.spawn();
+  mystery_last_spawn = 0;
+  mystry_spawn_interval = GetRandomValue(10, 20);
 }
 Game::~Game() { Alien::unloadImages(); }
 
 void Game::update() {
+  double currentTime = GetTime();
+  if (currentTime - mystery_last_spawn > mystry_spawn_interval) {
+    mystery.spawn();
+    mystery_last_spawn = GetTime();
+    mystry_spawn_interval = GetRandomValue(10, 20);
+  }
+
   for (auto &laser : spaceship.lasers) {
     laser.update();
   }

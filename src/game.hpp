@@ -36,4 +36,6 @@ private:
   float lastAlien_fire;
 
   Mystery mystery;
+  float mystry_spawn_interval;
+  float mystery_last_spawn;
 };
