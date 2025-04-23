@@ -39,6 +39,8 @@ void Game::update() {
   // std::cout << "lasers size: " << spaceship.lasers.size() << '\n';
 
   mystery.update();
+
+  checkCollisions();
 }
 
 void Game::draw() {
@@ -159,5 +161,36 @@ void Game::alienLaser() {
               6));
 
     lastAlien_fire = GetTime();
+  }
+}
+
+void Game::checkCollisions() {
+  for (auto &laser : spaceship.lasers) {
+    auto i = aliens.begin();
+    while (i != aliens.end()) {
+      if (CheckCollisionRecs(i->getRect(), laser.getRect())) {
+        i = aliens.erase(i);
+        laser.active = false;
+      } else {
+        ++i;
+      }
+    }
+
+    for (auto &bunker : bunkers) {
+      auto i = bunker.blocks.begin();
+      while (i != bunker.blocks.end()) {
+        if (CheckCollisionRecs(i->getRect(), laser.getRect())) {
+          i = bunker.blocks.erase(i);
+          laser.active = false;
+        } else {
+          ++i;
+        }
+      }
+    }
+
+    if (CheckCollisionRecs(mystery.getRect(), laser.getRect())) {
+      mystery.alive = false;
+      laser.active = false;
+    }
   }
 }

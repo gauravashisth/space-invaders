@@ -8,6 +8,8 @@ public:
   void draw();
   bool active;
 
+  Rectangle getRect();
+
 private:
   Vector2 position;
   int speed;

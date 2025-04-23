@@ -38,4 +38,6 @@ private:
   Mystery mystery;
   float mystry_spawn_interval;
   float mystery_last_spawn;
+
+  void checkCollisions();
 };

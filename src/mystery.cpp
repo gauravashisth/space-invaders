@@ -20,6 +20,13 @@ void Mystery::spawn() {
   alive = true;
 }
 
+Rectangle Mystery::getRect() {
+  if (alive)
+    return {position.x, position.y, float(image.width), float(image.height)};
+  else
+    return {position.x, position.y, 0, 0};
+}
+
 void Mystery::update() {
   if (alive) {
     position.x += speed;

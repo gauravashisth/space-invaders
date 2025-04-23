@@ -14,6 +14,8 @@ public:
   // vector that hold all the lasers
   std::vector<Laser> lasers;
 
+  Rectangle getRect();
+
 private:
   Texture2D image;
   Vector2 position;

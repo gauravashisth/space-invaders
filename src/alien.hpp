@@ -13,5 +13,7 @@ public:
   int type;
   Vector2 position;
 
+  Rectangle getRect();
+
 private:
 };
