@@ -4,44 +4,41 @@
 #include <iostream>
 // #include <iostream>
 
-Game::Game() {
-  // vector bunkers, which holds 4 bunker objects.
-  bunkers = newBunkers();
-  aliens = newAliens();
-
-  alien_dir = 1;
-  lastAlien_fire = 0.0;
-
-  // mystery.spawn();
-  mystery_last_spawn = 0;
-  mystry_spawn_interval = GetRandomValue(10, 20);
-}
+Game::Game() { initGame(); }
 Game::~Game() { Alien::unloadImages(); }
 
 void Game::update() {
-  double currentTime = GetTime();
-  if (currentTime - mystery_last_spawn > mystry_spawn_interval) {
-    mystery.spawn();
-    mystery_last_spawn = GetTime();
-    mystry_spawn_interval = GetRandomValue(10, 20);
+  if (run) {
+
+    double currentTime = GetTime();
+    if (currentTime - mystery_last_spawn > mystry_spawn_interval) {
+      mystery.spawn();
+      mystery_last_spawn = GetTime();
+      mystry_spawn_interval = GetRandomValue(10, 20);
+    }
+
+    for (auto &laser : spaceship.lasers) {
+      laser.update();
+    }
+
+    moveAliens();
+    alienLaser();
+    for (auto &laser : alienLasers) {
+      laser.update();
+    }
+
+    Dlasers();
+    // std::cout << "lasers size: " << spaceship.lasers.size() << '\n';
+
+    mystery.update();
+
+    checkCollisions();
+  } else {
+    if (IsKeyDown(KEY_ENTER)) {
+      reset();
+      initGame();
+    }
   }
-
-  for (auto &laser : spaceship.lasers) {
-    laser.update();
-  }
-
-  moveAliens();
-  alienLaser();
-  for (auto &laser : alienLasers) {
-    laser.update();
-  }
-
-  Dlasers();
-  // std::cout << "lasers size: " << spaceship.lasers.size() << '\n';
-
-  mystery.update();
-
-  checkCollisions();
 }
 
 void Game::draw() {
@@ -67,12 +64,14 @@ void Game::draw() {
 }
 
 void Game::inputs() {
-  if (IsKeyDown(KEY_H))
-    spaceship.moveL();
-  else if (IsKeyDown(KEY_L))
-    spaceship.moveR();
-  else if (IsKeyDown(KEY_J))
-    spaceship.shoot();
+  if (run) {
+    if (IsKeyDown(KEY_H))
+      spaceship.moveL();
+    else if (IsKeyDown(KEY_L))
+      spaceship.moveR();
+    else if (IsKeyDown(KEY_J))
+      spaceship.shoot();
+  }
 }
 
 // remove inactive lasers from "lasers" vector
@@ -133,11 +132,11 @@ void Game::moveAliens() {
   for (auto &alien : aliens) {
     if (alien.position.x + alien.alienImages[alien.type - 1].width >
         GetScreenWidth()) {
-      alien_dir = -1;
+      alien_dir = -2;
       moveJAliens(4);
     }
     if (alien.position.x < 0) {
-      alien_dir = 1;
+      alien_dir = 2;
       moveJAliens(4);
     }
     alien.update(alien_dir);
@@ -156,10 +155,10 @@ void Game::alienLaser() {
     int random_index = GetRandomValue(0, aliens.size() - 1);
 
     Alien &alien = aliens[random_index];
-    alienLasers.push_back(
-        Laser({alien.position.x + alien.alienImages[alien.type - 1].width / 2,
-               alien.position.y + alien.alienImages[alien.type - 1].height},
-              6));
+    alienLasers.push_back(Laser(
+        {alien.position.x + alien.alienImages[alien.type - 1].width / 2.0f,
+         alien.position.y + alien.alienImages[alien.type - 1].height},
+        6));
 
     lastAlien_fire = GetTime();
   }
@@ -200,7 +199,10 @@ void Game::checkCollisions() {
   for (auto &laser : alienLasers) {
     if (CheckCollisionRecs(laser.getRect(), spaceship.getRect())) {
       laser.active = false;
-      std::cout << "SPACESHIP HIT\n";
+      // std::cout << "SPACESHIP HIT\n";
+      lives--;
+      if (lives == 0)
+        GAMEOVER();
     }
     for (auto &bunker : bunkers) {
       auto i = bunker.blocks.begin();
@@ -228,7 +230,38 @@ void Game::checkCollisions() {
       }
     }
     if (CheckCollisionRecs(alien.getRect(), spaceship.getRect())) {
-      std::cout << "SPACESHIP HIT BY ALIEN\n";
+      // std::cout << "SPACESHIP HIT BY ALIEN\n";
+      GAMEOVER();
     }
   }
+}
+
+void Game::GAMEOVER() {
+  // std::cout << "Game Over!\n";
+  run = false;
+}
+
+void Game::initGame() {
+  // vector bunkers, which holds 4 bunker objects.
+  bunkers = newBunkers();
+  aliens = newAliens();
+
+  alien_dir = 2;
+  lastAlien_fire = 0.0;
+
+  // mystery.spawn();
+  mystery_last_spawn = 0;
+  mystry_spawn_interval = GetRandomValue(10, 20);
+
+  // spaceship life lines
+  lives = 3;
+
+  run = true;
+}
+
+void Game::reset() {
+  spaceship.reset();
+  aliens.clear();
+  alienLasers.clear();
+  bunkers.clear();
 }

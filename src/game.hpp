@@ -15,6 +15,7 @@ public:
   void update();
   // handles the player's input
   void inputs();
+  bool run;
 
 private:
   // deletes the inactive lasers
@@ -32,7 +33,7 @@ private:
   int alien_dir;
   std::vector<Laser> alienLasers;
   void alienLaser();
-  constexpr static float alienLaser_interval = 0.35;
+  constexpr static float alienLaser_interval = 0.30;
   float lastAlien_fire;
 
   Mystery mystery;
@@ -40,4 +41,9 @@ private:
   float mystery_last_spawn;
 
   void checkCollisions();
+
+  int lives;
+  void GAMEOVER();
+  void reset();
+  void initGame();
 };

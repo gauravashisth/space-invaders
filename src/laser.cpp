@@ -9,8 +9,8 @@ Laser::Laser(Vector2 position, int speed) {
 }
 void Laser::draw() {
   if (active)
-    // DrawRectangle(position.x, position.y, 4, 15, {243, 216, 63, 255});
-    DrawRectangleLines(position.x, position.y, 4, 15, {243, 216, 63, 255});
+    DrawRectangle(position.x, position.y, 4, 15, {243, 216, 63, 255});
+  // DrawRectangleLines(position.x, position.y, 4, 15, {243, 216, 63, 255});
 }
 
 Rectangle Laser::getRect() {

@@ -11,6 +11,7 @@ public:
   void moveL();
   void moveR();
   void shoot();
+  void reset();
   // vector that hold all the lasers
   std::vector<Laser> lasers;
 

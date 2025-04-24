@@ -24,7 +24,7 @@ void Spaceship::moveR() {
 }
 
 void Spaceship::shoot() {
-  if (GetTime() - interval >= 0.13) {
+  if (GetTime() - interval >= 0.30) {
     lasers.push_back(Laser(
         {position.x + (static_cast<float>(image.width) / 2) - 2, position.y},
         -3));
@@ -34,4 +34,10 @@ void Spaceship::shoot() {
 
 Rectangle Spaceship::getRect() {
   return {position.x, position.y, float(image.width), float(image.height)};
+}
+
+void Spaceship::reset() {
+  position.x = (GetScreenWidth() - image.width) * 0.5;
+  position.y = GetScreenHeight() * 0.8;
+  lasers.clear();
 }
