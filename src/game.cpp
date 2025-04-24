@@ -1,6 +1,7 @@
 #include "game.hpp"
 #include "alien.hpp"
 #include "raylib.h"
+#include <iostream>
 // #include <iostream>
 
 Game::Game() {
@@ -165,6 +166,7 @@ void Game::alienLaser() {
 }
 
 void Game::checkCollisions() {
+  // spaceship lasers
   for (auto &laser : spaceship.lasers) {
     auto i = aliens.begin();
     while (i != aliens.end()) {
@@ -191,6 +193,42 @@ void Game::checkCollisions() {
     if (CheckCollisionRecs(mystery.getRect(), laser.getRect())) {
       mystery.alive = false;
       laser.active = false;
+    }
+  }
+
+  // alien lasers
+  for (auto &laser : alienLasers) {
+    if (CheckCollisionRecs(laser.getRect(), spaceship.getRect())) {
+      laser.active = false;
+      std::cout << "SPACESHIP HIT\n";
+    }
+    for (auto &bunker : bunkers) {
+      auto i = bunker.blocks.begin();
+      while (i != bunker.blocks.end()) {
+        if (CheckCollisionRecs(i->getRect(), laser.getRect())) {
+          i = bunker.blocks.erase(i);
+          laser.active = false;
+        } else {
+          ++i;
+        }
+      }
+    }
+  }
+
+  // alien collision w/ bunker
+  for (auto &alien : aliens) {
+    for (auto &bunker : bunkers) {
+      auto i = bunker.blocks.begin();
+      while (i != bunker.blocks.end()) {
+        if (CheckCollisionRecs(i->getRect(), alien.getRect())) {
+          i = bunker.blocks.erase(i);
+        } else {
+          i++;
+        }
+      }
+    }
+    if (CheckCollisionRecs(alien.getRect(), spaceship.getRect())) {
+      std::cout << "SPACESHIP HIT BY ALIEN\n";
     }
   }
 }
