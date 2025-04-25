@@ -14,13 +14,13 @@ void Spaceship::draw() { DrawTextureV(image, position, WHITE); }
 
 void Spaceship::moveL() {
   position.x -= 7;
-  if (position.x < 0 /*- image.width*/)
-    position.x = GetScreenWidth() - image.width;
+  if (position.x < 10 /*- image.width*/)
+    position.x = GetScreenWidth() - image.width - 10;
 }
 void Spaceship::moveR() {
   position.x += 7;
-  if (position.x > GetScreenWidth() - image.width)
-    position.x = 0;
+  if (position.x > GetScreenWidth() - image.width - 10)
+    position.x = 10;
 }
 
 void Spaceship::shoot() {

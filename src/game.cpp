@@ -99,7 +99,8 @@ std::vector<Bunker> Game::newBunkers() {
   for (int i = 0; i < bunker_num; i++) {
     // calculates H position of each bunker
     float offsetX = (i + 1) * spacing + i * bunker_w;
-    bunkers.push_back(Bunker({offsetX, float(GetScreenHeight() * 0.65)}));
+    // determine the height of a bunker
+    bunkers.push_back(Bunker({offsetX, float(GetScreenHeight() * 0.70)}));
   }
   return bunkers;
 }
@@ -131,11 +132,11 @@ std::vector<Alien> Game::newAliens() {
 void Game::moveAliens() {
   for (auto &alien : aliens) {
     if (alien.position.x + alien.alienImages[alien.type - 1].width >
-        GetScreenWidth()) {
+        GetScreenWidth() - 10) {
       alien_dir = -2;
       moveJAliens(4);
     }
-    if (alien.position.x < 0) {
+    if (alien.position.x < 10) {
       alien_dir = 2;
       moveJAliens(4);
     }

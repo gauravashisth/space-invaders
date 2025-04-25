@@ -25,7 +25,7 @@ Rectangle Laser::getRect() {
 void Laser::update() {
   position.y += speed;
   if (active)
-    if (position.y > GetScreenHeight() || position.y < 0) {
+    if (position.y > GetScreenHeight() * 0.87 || position.y < 10) {
       active = false;
       // std::cout << "LASER INACTIVE\n";
     }

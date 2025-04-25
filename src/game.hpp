@@ -16,6 +16,7 @@ public:
   // handles the player's input
   void inputs();
   bool run;
+  int lives;
 
 private:
   // deletes the inactive lasers
@@ -42,7 +43,6 @@ private:
 
   void checkCollisions();
 
-  int lives;
   void GAMEOVER();
   void reset();
   void initGame();
